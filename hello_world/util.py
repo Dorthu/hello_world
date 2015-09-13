@@ -1,8 +1,8 @@
 """
 Provides utility functions for hello_world
 """
-from .decorators import uses_space, without_trailing_space
-from .generators import words
+from hello_world.words import uses_space, without_trailing_space
+from hello_world.words import words
 
 @uses_space
 @without_trailing_space
