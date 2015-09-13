@@ -1,8 +1,8 @@
 """
 hello_world - a program to print the phrase 'hello world'
 """
-from hello_world import display_text, get_word
+from hello_world import display_text, get_message
 
-MESSAGE = "{} {}".format(get_word(0), get_word(1))
+MESSAGE = get_message()
 
 display_text(MESSAGE)

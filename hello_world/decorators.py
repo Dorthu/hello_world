@@ -52,5 +52,20 @@ def uses_w(f):
 
     return with_w
 
+def uses_space(f):
+    @wraps(f)
+    def with_space(*args, **kwargs):
+        return f(*args, space_character = ' ', **kwargs)
 
+    return with_space
 
+def without_trailing_space(f):
+    @wraps(f)
+    def remove_trailing_spaces(*args, **kwargs):
+        result = f(*args, **kwargs)
+        if result.endswith(" "):
+            result = result[0:-1]
+
+        return result
+
+    return remove_trailing_spaces
